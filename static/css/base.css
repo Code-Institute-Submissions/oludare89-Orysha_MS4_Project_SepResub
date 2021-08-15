@@ -16,12 +16,18 @@ body {
     align-items: center;
     display: inline-flex;
     justify-content: center;
-    minheight: 1.5rem;
+    min-height: 1.5rem;
     width: 1.5rem;
 }
 
-.logo-font {
-    text-transform: uppercase;
+.logo {
+    height: 75px;
+    width: 75px;
+    border: 2px solid #a39d2e;
+}
+
+.logo:hover {
+    transform: scale(1.3);
 }
 
 .main-logo-link {
@@ -29,7 +35,8 @@ body {
 }
 
 .homepage-banner-text {
-    padding-top: 70px;
+    padding-top: 90px;
+    text-transform: uppercase;
 }
 
 .shop-now-button {
