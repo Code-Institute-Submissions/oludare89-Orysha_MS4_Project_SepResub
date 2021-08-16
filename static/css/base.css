@@ -35,7 +35,7 @@ body {
 }
 
 .homepage-banner-text {
-    padding-top: 90px;
+    padding-top: 180px;
     text-transform: uppercase;
 }
 
@@ -66,6 +66,10 @@ body {
 
 .border-black {
     border: 1px solid black !important;
+}
+
+.bg-black {
+    background: #000 !important;
 }
 
 /* ----------------------Media Queries */
