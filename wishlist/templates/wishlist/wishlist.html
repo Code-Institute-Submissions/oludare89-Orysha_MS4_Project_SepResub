@@ -23,6 +23,7 @@
             
             <div class="col-12 col-lg-6 offset-3">
                 <p class="text-muted">Wishlist Items</p>
+                {% if cart_items %}
                 <div class="wishlist-table table-responsive">
                     <table class="table table-sm table-borderless">
                         <thead>
@@ -47,6 +48,10 @@
                         </tbody>
                     </table>
                 </div>
+                {% else %}
+                    <p class="lead mb-5">Your wishlist is empty.</p>
+                    <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg"></a>
+                {% endif %}
             </div>
         </div>
 {% endblock %}
