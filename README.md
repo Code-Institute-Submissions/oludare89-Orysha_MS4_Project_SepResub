@@ -1,104 +1,211 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# ![Orysha](media/orysha_logo.jpg)
 
-Welcome oludare89,
+Oysha is an e-commerce site selling a range of clothing, hats and bags with an African influence.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. The last update to this file was: **July 2, 2021**
 
-## Gitpod Reminders
+## Table of Contents
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+- **[User Experience](#User-Experience)**
+  - [Project Goals](#Project-Goals)
+    - [User Stories](#User-Stories)
+- **[Design](#Design)**
+  - [Fonts](#Fonts)
+  - [Colours](#Colours)
+  - [Layout](#Layout)
+- **[Features](#Features)**
+  - [Existing Features](#Existing-Features)
+  - [Future Features](Future-Features)
+- **[Technologies](#Technologies)**
+  - [Site architecture](#Site-architecture)
+  - [Languages](#Languages)
+  - [Libraries](#Libraries)
+  - [Editors](#Editors)
+  - [Tools](#Tools)
+  - [Platforms](#Platforms)
+- **[Testing](#Testing)**
+  - [Validation](#Validation)
+  - [Manual Testing](#Manual-Testing)
+  - [Known Issues](#Known-Issues)
+- **[Deployment](#Deployment)**
+  - [Database Deployment](#Database-Deployment)
+  - [Deployment Platform](#Deployment-Platform)
+- **[Credits](#Credits)**
+  - [Media](#Media)
+  - [Acknowledgements](#Acknowledgements)
 
-`python3 -m http.server`
+## User Experience
 
-A blue button should appear to click: _Make Public_,
+### Project Goals
 
-Another blue button should appear to click: _Open Browser_.
+The project goal is to produce an e-commerce site that users can use to view and purchase items for sale on the site.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+### User Stories
 
-A blue button should appear to click: _Make Public_,
+New Visitors
+- (US001) - To view the products on offer on the website without having to register.
+- (US002) - To be able to register an account to the website.
+- (US003) - To be able to add items to the shopping basket.
+- (US004) - For the items in the shopping basket to remain there after registering an account.
+- (US005) - To be able to search and filter for specific products.
+- (US006) - To be able to sort displayed products by price and product rating.
 
-Another blue button should appear to click: _Open Browser_.
+Repeat Visitors
+- (US007) - To be able to login to my existing account.
+- (US008) - To be able to checkout using previously saved details.
+- (US009) - To be able to review my order history.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+All Visitors
+- (US010) - To get confirmation of a successful purchase.
+- (US011) - For payments to be completed securely.
+- (US012) - To be able to view a running total of the shopping basket.
 
-To log into the Heroku toolbelt CLI:
+Site Owners
+- (US013) - To be able to add new products or update existing products.
+- (US014) - For the website to be fully  on all device types.
+- (US015) - For payments to be processed without error.
+- (US016) - For users to be able to recover their account if they have lost their details.
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+##  Design
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+### Fonts
 
-------
+The font used throughout the site is [Arimo](https://fonts.google.com/specimen/Arimo). This was used as it's a clear and stylish font and was obtained from Google Fonts.
 
-## Release History
+### Colours
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+### Layout
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+The site is designed to work and be usable on various devices from mobile phones to desktop computers with a responsive layout. The minimum targeted screen width is 320 pixels wide and a maximum tested width of 2560 pixels.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+All initial wireframes are available below:
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+- [Home Page](https://user-images.githubusercontent.com/46917417/131354066-c6b1cf57-e92d-42b3-8c4d-9f90cba0e79e.png)
+- [Products Page](https://user-images.githubusercontent.com/46917417/131354177-a59808df-0bca-4f0a-9fa1-089473f4ac56.png)
+- [Basket Page](https://user-images.githubusercontent.com/46917417/131354473-4f515990-c3fb-456d-9f2d-87ca5dd192a6.png)
+- [Checkout Page](https://user-images.githubusercontent.com/46917417/131354618-0a9723d0-9837-4b6c-8a93-e032cbbba028.png)
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+## Features
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+### Existing Features
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+### Future Features
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
 
-------
+## Technologies
 
-## FAQ about the uptime script
+### Site architecture
 
-**Why have you added this script?**
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
 
-**How will this affect me?**
+### Languages
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+- [HTML5](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5)
+  - Used to create the site layout.
+- [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS)
+  - Used to style and colour HTML.
+- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+  - Used to create the site's dynamic elements.
+- [Python](https://www.python.org/)
+  - Used for the backend server and running queries to the database.
+- [Jinja](https://jinja.palletsprojects.com/en/2.11.x/)
+  - Used to generate and manipulate the site templates.
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+### Libraries
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+- [Django](https://www.djangoproject.com/)
+    - The project uses the Django framework to create the app.
+- [JQuery](https://jquery.com)
+    - The project uses JQuery for DOM manipulation.
+- [Bootstrap](https://getbootstrap.com/)
+    - The project uses Bootstrap to aid in responsive design.
 
-**So….?**
+### Editors
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+- [Balsamic](https://balsamiq.com/)
+  - Used to create the website's wireframes.
 
-**Can I opt out?**
+### Tools
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+- [Git](https://git-scm.com/)
+  - Used for version control (via github desktop).
+- [Github desktop](https://desktop.github.com/)
+  - Used to push updates and synchronise local code with the remote repository.
+- [Github](https://github.com/)
+  - Used to store the project repository and deploy the site via github pages.
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+### Platforms
 
-**Anything more?**
+- [Heroku](https://www.heroku.com/platform)
+  - The project uses Heroku as it's deployment platform.
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+## Testing
 
----
+### Validation
 
-Happy coding!
+- [HTML]()
+
+- [CSS]()
+
+- [Python]()
+
+### Manual Testing
+
+
+### Known Issues
+
+
+## Deployment
+
+### Database Deployment
+
+
+
+#### Connecting to Mongodb
+
+
+
+#### Creating or selecting a database
+
+
+
+#### Creating a collection
+
+
+
+#### Adding an index
+
+
+
+### Deployment Platform
+
+
+
+#### Creating a Heroku app
+
+
+
+#### Setting Environment variables
+
+
+#### Deployment
+
+
+## Credits
+
+### Media
+- [Portrait beautiful African woman in traditional turban, Kente head wrap, dashiki printing, black afro women vector silhouette Africa batik ethnic geometric decoration Brown color cloth, hairstyle](https://www.shutterstock.com/image-vector/portrait-beautiful-african-woman-traditional-turban-1039870192) by [robin.ph](https://www.shutterstock.com/g/araratart)
+-[African American guy in national clothes on a background of a white wall](https://www.shutterstock.com/image-photo/african-american-guy-national-clothes-on-1586383165) by [Mishadp](https://www.shutterstock.com/g/Misha+Chayka)
+-[African man wearing traditional clothes](https://www.shutterstock.com/image-photo/african-man-wearing-traditional-clothes-406426096) by [Ranta Images](https://www.shutterstock.com/g/Amazingmikael)
+-[Portrait of stylish black african american man at hat and sunglasses against sunny autumn fall background. Rich people in africa at traditional dress.](https://www.shutterstock.com/image-photo/portrait-stylish-black-african-american-man-769823326) by [AS photostudio](https://www.shutterstock.com/g/AS+photo)
+-[Young Nigerian on agbada, crosses legs and hands sitting in a traditional painted canvas or muslin fabric cloth studio backdrop or background, suitable for use with portraits and products.](https://www.shutterstock.com/image-photo/young-nigerian-on-agbada-crosses-legs-1246702597) by [Amaechi Osazuwa Desmond](https://www.shutterstock.com/g/Amaechi+Osazuwa+Desmond)
+
+### Acknowledgements
+- Assistance and guidance from my mentor Dick Vlaanderen
+- Assistance from Code Institute tutors
+- Code Institute - Boutique Ado tutorial videos
