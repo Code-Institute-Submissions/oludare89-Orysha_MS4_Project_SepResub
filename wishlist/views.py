@@ -3,7 +3,7 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
 
-from .models import Product,
+from .models import Product
 from wishlist.contexts import wishlist_contents
 
 # Create your views here.
@@ -23,7 +23,7 @@ def add_to_wishlist(request, item_id):
     size = None
     if 'product_size' in request.POST:
         size = request.POST['product_size']
-    wishlist = request.session.get('wishlist', {})
+        wishlist = request.session.get('wishlist', {})
 
     if size:
         if item_id in list(wishlist.keys()):
@@ -44,6 +44,7 @@ def add_to_wishlist(request, item_id):
             wishlist[item_id] = quantity
             messages.success(request, f'Added {product.name} to your cart')
 
+    in_wishlist = True
     request.session['wishlist'] = wishlist
     return redirect(redirect_url)
 
@@ -101,6 +102,7 @@ def remove_from_wishlist(request, item_id):
             wishlist.pop(item_id)
             messages.success(request, f'Removed {product.name} from your wishlist')
 
+        in_wishlist = False
         request.session['wishlist'] = wishlist
         return HttpResponse(status=200)
 
