@@ -1,0 +1,1 @@
+web: gunicorn orysha.wsgi:application
